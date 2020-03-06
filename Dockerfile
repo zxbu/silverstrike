@@ -19,4 +19,5 @@ ENV UWSGI_WSGI_FILE=wsgi.py UWSGI_HTTP=:8000 UWSGI_MASTER=1 UWSGI_WORKERS=2 UWSG
 # collect static files
 RUN python manage.py collectstatic
 
+# run
 CMD sleep 5 && python manage.py migrate && uwsgi
